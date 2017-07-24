@@ -766,9 +766,9 @@ public class mainInterface extends Application{
 			}
 			if(i.getClass()==InputElement.class){
 				InputElement text=(InputElement)i;
-				if(text.x<0) text.x=0;
+				if(text.x<300) text.x=300;
 				if(text.y<30) text.y=30;
-				if(text.x>workspace.getWidth()||text.y>workspace.getHeight()){
+				if(text.x>workspace.getWidth()+300||text.y>workspace.getHeight()+30){
 					focus=findFocus(text);
 					delete();
 					return;
